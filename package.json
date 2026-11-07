@@ -4,6 +4,14 @@
   "description": "Bagel the pixel-art goldendoodle walks, sits, wags, lies down and naps in your sidebar.",
   "version": "0.0.1",
   "publisher": "jackseigerman",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackSeigerman/bagel-vscode.git"
+  },
+  "homepage": "https://github.com/jackSeigerman/bagel-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/jackSeigerman/bagel-vscode/issues"
+  },
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.74.0"
@@ -32,6 +40,7 @@
   "scripts": {
     "sync": "node scripts/sync-bagel.mjs",
     "icons": "node scripts/make-icons.mjs",
-    "package": "npx --yes @vscode/vsce@4 package --skip-license --allow-missing-repository"
+    "gif": "node scripts/make-gif.mjs",
+    "package": "npx --yes @vscode/vsce@4 package --skip-license"
   }
 }

@@ -1,3 +1,5 @@
 scripts/**
 *.vsix
 .gitignore
+images/bagel.gif
+images/gif-panel.png
