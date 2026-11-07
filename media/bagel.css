@@ -1,0 +1,91 @@
+/* Bagel's sidebar section. Her art is 32 × 32 pixels, each drawn
+   --bagel-pixel wide, along the bottom of the section. */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.stage {
+  --bagel-pixel: 2px;
+  /* Room either side, so she never touches the edges. */
+  --bagel-inset: 8px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(32 * var(--bagel-pixel));
+}
+
+.bagel {
+  position: absolute;
+  bottom: 0;
+  left: var(--bagel-inset);
+  width: calc(32 * var(--bagel-pixel));
+  height: calc(32 * var(--bagel-pixel));
+  visibility: hidden;
+}
+
+.bagel[data-ready="true"] {
+  visibility: visible;
+}
+
+.bagel[data-direction="-1"] {
+  transform: scaleX(-1);
+}
+
+/* One pixel; the drawing is its box-shadow. */
+.bagel__pixels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--bagel-pixel);
+  height: var(--bagel-pixel);
+}
+
+.bagel__blink {
+  top: calc(var(--bagel-head-y, 0) * var(--bagel-pixel));
+}
+
+.bagel__zs {
+  position: absolute;
+  top: calc(14 * var(--bagel-pixel));
+  left: calc(22 * var(--bagel-pixel));
+}
+
+/* Zs to match the theme: white on dark, black on light. */
+.bagel__z {
+  --z: #fff;
+  position: absolute;
+  width: var(--bagel-pixel);
+  height: var(--bagel-pixel);
+  background: var(--z);
+  box-shadow: var(--bagel-pixel) 0 var(--z),
+    calc(2 * var(--bagel-pixel)) 0 var(--z),
+    calc(3 * var(--bagel-pixel)) 0 var(--z),
+    calc(2 * var(--bagel-pixel)) var(--bagel-pixel) var(--z),
+    var(--bagel-pixel) calc(2 * var(--bagel-pixel)) var(--z),
+    0 calc(3 * var(--bagel-pixel)) var(--z),
+    var(--bagel-pixel) calc(3 * var(--bagel-pixel)) var(--z),
+    calc(2 * var(--bagel-pixel)) calc(3 * var(--bagel-pixel)) var(--z),
+    calc(3 * var(--bagel-pixel)) calc(3 * var(--bagel-pixel)) var(--z);
+}
+
+body.vscode-light .bagel__z,
+body.vscode-high-contrast-light .bagel__z {
+  --z: #000;
+}
+
+/* Flip the dog and the trail, but keep each letter readable either way. */
+.bagel[data-direction="-1"] .bagel__z {
+  transform: scaleX(-1);
+  transform-origin: calc(2 * var(--bagel-pixel)) 0;
+}
+
+[hidden] {
+  display: none !important;
+}

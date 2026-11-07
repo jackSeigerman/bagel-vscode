@@ -1,0 +1,37 @@
+// Lying down on the same 32 × 32 grid and palette as the footer sprites.
+// Bagel's approved head is lowered ten art pixels; the body, folded hind
+// leg and forward resting paws are drawn individually below it.
+export const LYING = [
+  "................................",
+  "................................",
+  "................................",
+  "................................",
+  "................................",
+  "................................",
+  "................................",
+  "................................",
+  "................................",
+  "................................",
+  "................................",
+  "...................XXXXX........",
+  "................XX.XLHHXX.......",
+  "..............XXHHXHHGGGGXX.....",
+  ".............XLHHGGHGGGGGGLX....",
+  ".............XLHGGGGGLLLLLLX....",
+  "............XGGGGHGGLHLLLLLXX...",
+  "............XGGGHHGGLNLLLNGLXX..",
+  "..........XXGGGHHGXLLNLCCNLLLX..",
+  ".......XXXXXGGHHHGXLLLLLCCCXXX..",
+  ".....XXHHGXXGGHHGGXLLLLCCCXXX...",
+  "....XHHGGGHXXGGGGGXLLLLCCCXXX...",
+  "...XHGGGHGLGXGGGGXXSSLLLCCCX....",
+  "..XHGGGGGGLGXGGGGXSSSXXXXXXX....",
+  "..XGGHLGGGGGGXGGGXPSSXXXXXX.....",
+  ".XGGGHLGGGGGXXXXXPPPPPXX........",
+  ".XGGGGGHGGGGSSGGCCCCLLXX........",
+  ".XGGHGGGGGGGSSSSGCCCCLLLXX......",
+  ".XGSGGGGLXXSSSSSGGGCCCCLLLXX....",
+  ".XGGXGGHLGXGGGSSSGGLLXXXXLLLXX..",
+  ".XGGXXGGGXXLCCCXGGGLCCCXXLCCCX..",
+  "..XXXXXXXXXXXXXXXXXXXXXXXXXXXX.."
+]

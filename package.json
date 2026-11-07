@@ -1,0 +1,37 @@
+{
+  "name": "bagel",
+  "displayName": "Bagel",
+  "description": "Bagel the pixel-art goldendoodle walks, sits, wags, lies down and naps in your sidebar.",
+  "version": "0.0.1",
+  "publisher": "jackseigerman",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "pet",
+    "dog",
+    "pixel art"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "bagel.view",
+          "name": "Bagel",
+          "icon": "images/bagel.svg"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "sync": "node scripts/sync-bagel.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "package": "npx --yes @vscode/vsce@4 package --skip-license --allow-missing-repository"
+  }
+}
